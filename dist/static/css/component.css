@@ -223,7 +223,7 @@ body {
 
 .dummy-img,
 .dummy-text {
-	max-width: 600px;
+	/*max-width: 600px;*/
 	width: 90%;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
@@ -270,7 +270,6 @@ p.dummy-text:nth-child(3) {
 }
 
 .dummy-img {
-	height: 400px;
 	background-color: #ddd;
 	margin: 30px auto;
 }
