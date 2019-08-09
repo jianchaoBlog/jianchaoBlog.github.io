@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Markdown 拓展 张建超 | 前端开发帮助文档</title>
+    <meta name="description" content="前端vue开发页面帮助文档">
+    <link rel="icon" href="/images/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.d9a4ac53.css" as="style"><link rel="preload" href="/assets/js/app.6c0da656.js" as="script"><link rel="preload" href="/assets/js/2.d1fc40bb.js" as="script"><link rel="preload" href="/assets/js/24.f478f085.js" as="script"><link rel="prefetch" href="/assets/js/10.a6ea8496.js"><link rel="prefetch" href="/assets/js/11.02354a3a.js"><link rel="prefetch" href="/assets/js/12.b721136f.js"><link rel="prefetch" href="/assets/js/13.f18e178b.js"><link rel="prefetch" href="/assets/js/14.e31cd7c9.js"><link rel="prefetch" href="/assets/js/15.78ca3635.js"><link rel="prefetch" href="/assets/js/16.e23cee57.js"><link rel="prefetch" href="/assets/js/17.2bd8e421.js"><link rel="prefetch" href="/assets/js/18.82ca41f1.js"><link rel="prefetch" href="/assets/js/19.2f96f1a4.js"><link rel="prefetch" href="/assets/js/20.7442dcfc.js"><link rel="prefetch" href="/assets/js/21.038999f9.js"><link rel="prefetch" href="/assets/js/22.9a929643.js"><link rel="prefetch" href="/assets/js/23.70873758.js"><link rel="prefetch" href="/assets/js/25.6a78eb48.js"><link rel="prefetch" href="/assets/js/3.d9629a3f.js"><link rel="prefetch" href="/assets/js/4.1fa4b0ff.js"><link rel="prefetch" href="/assets/js/5.549fba01.js"><link rel="prefetch" href="/assets/js/6.66a6c499.js"><link rel="prefetch" href="/assets/js/7.3f862365.js"><link rel="prefetch" href="/assets/js/8.b60ca572.js"><link rel="prefetch" href="/assets/js/9.202f65d8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d9a4ac53.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">前端开发帮助文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/developmentProcess/getReady.html" class="nav-link">开发流程</a></div><div class="nav-item"><a href="/elementUi/button.html" class="nav-link">组件文档</a></div><div class="nav-item"><a href="/charts/chartsPage.html" class="nav-link">图表</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/developmentProcess/getReady.html" class="nav-link">开发流程</a></div><div class="nav-item"><a href="/elementUi/button.html" class="nav-link">组件文档</a></div><div class="nav-item"><a href="/charts/chartsPage.html" class="nav-link">图表</a></div> <!----></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="markdown-拓展-张建超"><a href="#markdown-拓展-张建超" aria-hidden="true" class="header-anchor">#</a> Markdown 拓展 张建超</h1> <h2 id="折线图"><a href="#折线图" aria-hidden="true" class="header-anchor">#</a> 折线图</h2> <p>网站内部的链接，将会被转换成 <code>&lt;router-link&gt;</code> 用于 SPA 导航。同时，站内的每一个文件夹下的 <code>README.md</code> 或者 <code>index.md</code> 文件都会被自动编译为 <code>index.html</code>，对应的链接将被视为 <code>/</code>。</p> <p>以如下的文件结构为例：</p> <div class="language- extra-class"><pre class="language-text"><code>.
+├─ README.md
+├─ foo
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+   ├─ README.md
+   ├─ three.md
+   └─ four.md
+</code></pre></div><p>假设你现在在 <code>foo/one.md</code> 中：</p> <div class="language-md extra-class"><pre class="language-md"><code><span class="token url">[<span class="token content">Home</span>](/)</span> <span class="token comment">&lt;!-- 跳转到根部的 README.md --&gt;</span>
+<span class="token url">[<span class="token content">foo</span>](/foo/)</span> <span class="token comment">&lt;!-- 跳转到 foo 文件夹的 index.html --&gt;</span>
+<span class="token url">[<span class="token content">foo heading</span>](./#heading)</span> <span class="token comment">&lt;!-- 跳转到 foo/index.html 的特定标题位置 --&gt;</span>
+<span class="token url">[<span class="token content">bar - three</span>](../bar/three.md)</span> <span class="token comment">&lt;!-- 具体文件可以使用 .md 结尾（推荐） --&gt;</span>
+<span class="token url">[<span class="token content">bar - four</span>](../bar/four.html)</span> <span class="token comment">&lt;!-- 也可以用 .html --&gt;</span>
+``<span class="token code keyword">`网站内部的链接，将会被转换成 `</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span><span class="token punctuation">&gt;</span></span><span class="token code keyword">` 用于 SPA 导航。同时，站内的每一个文件夹下的 `</span>README.md<span class="token code keyword">` 或者 `</span>index.md<span class="token code keyword">` 文件都会被自动编译为 `</span>index.html<span class="token code keyword">`，对应的链接将被视为 `</span>/`。
+   
+   以如下的文件结构为例：
+   
+</code></pre></div><p>.
+├─ README.md
+├─ foo
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+├─ README.md
+├─ three.md
+└─ four.md</p> <div class="language- extra-class"><pre class="language-text"><code>
+假设你现在在 `foo/one.md` 中：
+
+``` md
+[Home](/) &lt;!-- 跳转到根部的 README.md --&gt;
+[foo](/foo/) &lt;!-- 跳转到 foo 文件夹的 index.html --&gt;
+[foo heading](./#heading) &lt;!-- 跳转到 foo/index.html 的特定标题位置 --&gt;
+[bar - three](../bar/three.md) &lt;!-- 具体文件可以使用 .md 结尾（推荐） --&gt;
+[bar - four](../bar/four.html) &lt;!-- 也可以用 .html --&gt;
+</code></pre></div><h2 id="饼状图"><a href="#饼状图" aria-hidden="true" class="header-anchor">#</a> 饼状图</h2> <p>网站内部的链接，将会被转换成 <code>&lt;router-link&gt;</code> 用于 SPA 导航。同时，站内的每一个文件夹下的 <code>README.md</code> 或者 <code>index.md</code> 文件都会被自动编译为 <code>index.html</code>，对应的链接将被视为 <code>/</code>。</p> <p>以如下的文件结构为例：</p> <div class="language- extra-class"><pre class="language-text"><code>.
+├─ README.md
+├─ foo
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+   ├─ README.md
+   ├─ three.md
+   └─ four.md
+</code></pre></div><p>假设你现在在 <code>foo/one.md</code> 中：</p> <div class="language-md extra-class"><pre class="language-md"><code><span class="token url">[<span class="token content">Home</span>](/)</span> <span class="token comment">&lt;!-- 跳转到根部的 README.md --&gt;</span>
+<span class="token url">[<span class="token content">foo</span>](/foo/)</span> <span class="token comment">&lt;!-- 跳转到 foo 文件夹的 index.html --&gt;</span>
+<span class="token url">[<span class="token content">foo heading</span>](./#heading)</span> <span class="token comment">&lt;!-- 跳转到 foo/index.html 的特定标题位置 --&gt;</span>
+<span class="token url">[<span class="token content">bar - three</span>](../bar/three.md)</span> <span class="token comment">&lt;!-- 具体文件可以使用 .md 结尾（推荐） --&gt;</span>
+<span class="token url">[<span class="token content">bar - four</span>](../bar/four.html)</span> <span class="token comment">&lt;!-- 也可以用 .html --&gt;</span>
+``<span class="token code keyword">`网站内部的链接，将会被转换成 `</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>router-link</span><span class="token punctuation">&gt;</span></span><span class="token code keyword">` 用于 SPA 导航。同时，站内的每一个文件夹下的 `</span>README.md<span class="token code keyword">` 或者 `</span>index.md<span class="token code keyword">` 文件都会被自动编译为 `</span>index.html<span class="token code keyword">`，对应的链接将被视为 `</span>/`。
+   
+   以如下的文件结构为例：
+   
+</code></pre></div><p>.
+├─ README.md
+├─ foo
+│  ├─ README.md
+│  ├─ one.md
+│  └─ two.md
+└─ bar
+├─ README.md
+├─ three.md
+└─ four.md</p> <div class="language- extra-class"><pre class="language-text"><code>
+假设你现在在 `foo/one.md` 中：
+
+``` md
+[Home](/) &lt;!-- 跳转到根部的 README.md --&gt;
+[foo](/foo/) &lt;!-- 跳转到 foo 文件夹的 index.html --&gt;
+[foo heading](./#heading) &lt;!-- 跳转到 foo/index.html 的特定标题位置 --&gt;
+[bar - three](../bar/three.md) &lt;!-- 具体文件可以使用 .md 结尾（推荐） --&gt;
+[bar - four](../bar/four.html) &lt;!-- 也可以用 .html --&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.6c0da656.js" defer></script><script src="/assets/js/2.d1fc40bb.js" defer></script><script src="/assets/js/24.f478f085.js" defer></script>
+  </body>
+</html>
